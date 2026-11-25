@@ -1,0 +1,12 @@
+name: knowledge-api
+
+services:
+    php:
+        build:
+            context: .
+            dockerfile: docker/php/Dockerfile
+        working_dir: /var/www/html
+    nginx:
+        image: nginx:1.28-alpine
+        depends_on:
+            - php

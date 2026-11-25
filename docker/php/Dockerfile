@@ -23,7 +23,7 @@ COPY --from=composer:2.8 /usr/bin/composer /usr/local/bin/composer
 
 # PHP configuration
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/99-app.ini
-COPY docker/php/www.conf /usr/local/etc/php-fpm.d/zz-app.
+COPY docker/php/www.conf /usr/local/etc/php-fpm.d/zz-app.conf
 
 WORKDIR /var/www/html
 
